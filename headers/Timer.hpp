@@ -15,5 +15,6 @@ public:
     void startTimer ();
 public slots: 
 signals:
+    void timerFinish ();
     void checkTime (int __secondsToFinish, int __startSeconds);
 };

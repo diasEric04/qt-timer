@@ -16,6 +16,7 @@ void Timer::startTimer (void) {
             sleep(1);
         } catch (const StopTimer &e) {
             std::cout << "\ntimer finished\n";
+            emit timerFinish();
             break;
         }
     }

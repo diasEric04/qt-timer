@@ -16,6 +16,7 @@ int main (int argc, char **argv) {
     Timer t {seconds};
 
     QObject::connect (&t, &Timer::checkTime, &c, &Clock::checkTime);
+    QObject::connect (&t, &Timer::timerFinish, &app, &QCoreApplication::quit, Qt::QueuedConnection);
 
     t.startTimer();
 
